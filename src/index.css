@@ -7,7 +7,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body, * {
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  min-height: calc(100vh - 95px);
+}
+
+/* -----------------------------------------PAG PESSOA----------------------------------------- */
+
+.pessoa h1{
+  margin: 0;
+  padding: 0;
+}
+
+.pessoa .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pessoa .header button{
+  margin-left: 10px;
+  height: 30px;
+}
+
+

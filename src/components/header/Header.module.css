@@ -1,0 +1,31 @@
+.header {
+  background-color: brown;
+}
+
+.header header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header strong {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+  margin-right: 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+}
