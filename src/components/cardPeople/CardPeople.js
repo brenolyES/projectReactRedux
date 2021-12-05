@@ -19,7 +19,7 @@ const CardPeople = ({people, deletePeople, setEdit}) => {
         </div>
         <div className={styles.rigth}>
           <button onClick={()=>deletePeople(people.idPessoa)}>Deletar</button>
-          <button onClick={()=>setEdit()}>Editar</button>
+          <button onClick={()=>setEdit(people)}>Editar</button>
         </div>
       </div>
     </div>

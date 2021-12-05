@@ -19,3 +19,8 @@ export const postPeople = async (values, navigate)=> {
   await apiMaicon.post('/pessoa', values);
   navigate('/pessoa')
 }
+
+export const putPeople = async (values, navigate, idPessoa)=> {
+  await apiMaicon.put(`/pessoa/${idPessoa}`, values);
+  navigate('/pessoa')
+}

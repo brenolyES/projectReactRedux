@@ -1,13 +1,12 @@
 const INICIAL_STATE = {
   people: {
     listPeople: [],
-    addOrEdit: 'nada'
-  },
-  peopleDTO: {
     cpf: '',
     dataNascimento: '',
     email: '',
-    nome: ''
+    nome: '',
+    idPessoa: 0,
+    addOrEdit: 'nada'
   }
 }
 
@@ -20,9 +19,21 @@ const pessoaReducer = (state = INICIAL_STATE, action) => {
       }
     }
   }
-  if(action.type === 'SET_ADDOREDIT'){
+  if(action.type === 'SET_ADD'){
     return {
       people: {
+        addOrEdit: action.addOrEdit
+      }
+    }
+  }
+  if(action.type === 'SET_EDIT'){
+    return {
+      people: {
+        cpf: action.cpf,
+        dataNascimento: action.dataNascimento,
+        email: action.email,
+        nome: action.nome,
+        idPessoa: action.idPessoa,
         addOrEdit: action.addOrEdit
       }
     }

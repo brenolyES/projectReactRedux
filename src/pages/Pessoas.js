@@ -21,15 +21,20 @@ const Pessoas = ({ people, dispatch }) => {
 
   const setAdd = () => {
     dispatch({
-      type: 'SET_ADDOREDIT',
+      type: 'SET_ADD',
       addOrEdit: 'add'
     })
     navigate('/addandedit')
   }
 
-  const setEdit = () => {
+  const setEdit = (peopleEdit) => {
     dispatch({
-      type: 'SET_ADDOREDIT',
+      type: 'SET_EDIT',
+      cpf: peopleEdit.cpf,
+      dataNascimento: peopleEdit.dataNascimento,
+      email: peopleEdit.email,
+      nome: peopleEdit.nome,
+      idPessoa: peopleEdit.idPessoa,
       addOrEdit: 'edit'
     })
     navigate('/addandedit')
