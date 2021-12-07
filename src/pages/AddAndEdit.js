@@ -5,14 +5,13 @@ import { putPeople } from '../store/actions/Pessoa';
 import { useNavigate } from 'react-router';
 
 const AddAndEdit = ({ people, dispatch }) => {
-
   const navigate = useNavigate();
-  let AddAndEdit = ''
+  let AddAndEdit = true
 
   const Condition = () => {
     AddAndEdit = people.addOrEdit
     const idPeople = people.idPessoa
-    if (AddAndEdit === 'edit') {
+    if (AddAndEdit === false) {
       return (
         <>
           <h1>Editar</h1>
@@ -30,31 +29,18 @@ const AddAndEdit = ({ people, dispatch }) => {
             <Form>
               <label htmlFor="nome">Nome </label>
               <Field id="nome" name="nome" placeholder="Nome" />
-
               <label htmlFor="email">E-mail</label>
               <Field id="email" name="email" placeholder="E-mail" />
-
               <label htmlFor="cpf">CPF</label>
               <Field id="cpf" name="cpf" placeholder="CPF" />
-
               <label htmlFor="dataNascimento">Data Nacimento</label>
               <Field id="dataNascimento" name="dataNascimento" placeholder="Data Nacimento" />
-              
               <button type="submit">Submit</button>
             </Form>
           </Formik>
         </>
       );
-
-
-
-
-
-
-
-
-
-    } else if (AddAndEdit === 'add') {
+    } else if (AddAndEdit) {
       return (
         <>
           <h1>Adicionar</h1>
@@ -72,22 +58,17 @@ const AddAndEdit = ({ people, dispatch }) => {
             <Form>
               <label htmlFor="nome">Nome </label>
               <Field id="nome" name="nome" placeholder="Nome" />
-
               <label htmlFor="email">E-mail</label>
               <Field id="email" name="email" placeholder="E-mail" />
-
               <label htmlFor="cpf">CPF</label>
               <Field id="cpf" name="cpf" placeholder="CPF" />
-
               <label htmlFor="dataNascimento">Data Nacimento</label>
               <Field id="dataNascimento" name="dataNascimento" placeholder="Data Nacimento" />
-              
               <button type="submit">Submit</button>
             </Form>
           </Formik>
         </>
       );
-
     } else {
       return (
         <>

@@ -1,7 +1,5 @@
 import { apiMaicon } from "../../api";
 
-// listPessoasParametro
-
 export const getPeople = async (dispatch) => {
   const { data } = await apiMaicon.get('/pessoa')
   const People = {

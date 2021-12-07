@@ -6,10 +6,9 @@ const INICIAL_STATE = {
     email: '',
     nome: '',
     idPessoa: 0,
-    addOrEdit: 'nada'
+    addOrEdit: true
   }
 }
-
 
 const pessoaReducer = (state = INICIAL_STATE, action) => {
   if(action.type === 'SET_LISTPEOPLE'){

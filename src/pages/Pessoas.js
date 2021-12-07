@@ -22,7 +22,7 @@ const Pessoas = ({ people, dispatch }) => {
   const setAdd = () => {
     dispatch({
       type: 'SET_ADD',
-      addOrEdit: 'add'
+      addOrEdit: true
     })
     navigate('/addandedit')
   }
@@ -35,7 +35,7 @@ const Pessoas = ({ people, dispatch }) => {
       email: peopleEdit.email,
       nome: peopleEdit.nome,
       idPessoa: peopleEdit.idPessoa,
-      addOrEdit: 'edit'
+      addOrEdit: false
     })
     navigate('/addandedit')
   }
